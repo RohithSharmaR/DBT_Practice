@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
+
 select 
 order_id,
 upper(customer_name) as CUSTOMER_NAME,
@@ -12,4 +19,4 @@ discount,
 profit,
 state
 from 
-dbt_prac_dev.raw.dmart_raw
+{{ source('raw', 'dmart_raw') }}
