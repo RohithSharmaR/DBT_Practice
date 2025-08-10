@@ -1,6 +1,6 @@
-select
-* 
+select 
+*
 from
 {{ ref('dim_category') }}
 where 
-category_id < 1
+category_id <=0
