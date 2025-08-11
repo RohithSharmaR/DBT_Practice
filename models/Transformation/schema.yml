@@ -28,7 +28,9 @@ models:
           - not_null
           - unique
 
-  - name: region
-    tests:
-      - accepted_values:
-          values: ["Central", "East", "North", "South", "West"]
+      - name: region
+        tests:
+          - accepted_values:
+             values: ["Central", "East", "North", "South", "West"]
+
+

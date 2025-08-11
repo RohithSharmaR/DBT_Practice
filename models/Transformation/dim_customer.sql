@@ -1,3 +1,11 @@
+{{
+    config(
+        materialized='view',
+        database='DBT_PRAC_DEV',
+        schema='customer'
+    )
+}}
+
 with raw_data as (
     select
     distinct customer_name ,
