@@ -5,3 +5,6 @@ models:
       - name: sales
         tests:
           - not_zero
+      - name: profit
+        tests:
+          - not_zero

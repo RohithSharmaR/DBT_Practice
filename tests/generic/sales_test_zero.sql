@@ -1,8 +1,8 @@
 {% test not_zero(model, column_name) %}
     select
         *
-    from
+    from 
         {{model}}
-    where 
-        {{column_name}} >0
-{% endtest %}
+    where
+        {{column_name}}  < 0
+{% endtest%}
