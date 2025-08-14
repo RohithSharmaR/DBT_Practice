@@ -54,7 +54,7 @@ models:
         {% elif target.name == 'stage' %} DBT_PRAC_STAGE
         {% elif target.name == 'prod' %} DBT_PRAC_PROD
         {% else %} 'invalid_database'
-        {% endif %}  #configuration
+        {% endif %} 
       +schema: Transformation
     Reporting:
       +database:  |
