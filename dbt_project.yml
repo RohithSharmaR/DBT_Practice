@@ -41,27 +41,27 @@ models:
     staging:
       +database: |
         {% if target.name == 'dev' %} DBT_PRAC_DEV
-        {% if target.name == 'test' %} DBT_PRAC_TEST
-        {% if target.name == 'stage' %} DBT_PRAC_STAGE
-        {% if target.name == 'prod' %} DBT_PRAC_PROD
+        {% elif target.name == 'test' %} DBT_PRAC_TEST
+        {% elif target.name == 'stage' %} DBT_PRAC_STAGE
+        {% elif target.name == 'prod' %} DBT_PRAC_PROD
         {% else %} 'invalid_database'
         {% endif %}
       +schema: raw
     Transformation: #path
       +database: |
-       {% if target.name == 'dev' %} DBT_PRAC_DEV
-        {% if target.name == 'test' %} DBT_PRAC_TEST
-        {% if target.name == 'stage' %} DBT_PRAC_STAGE
-        {% if target.name == 'prod' %} DBT_PRAC_PROD
+        {% if target.name == 'dev' %} DBT_PRAC_DEV
+        {% elif target.name == 'test' %} DBT_PRAC_TEST
+        {% elif target.name == 'stage' %} DBT_PRAC_STAGE
+        {% elif target.name == 'prod' %} DBT_PRAC_PROD
         {% else %} 'invalid_database'
         {% endif %}  #configuration
       +schema: Transformation
     Reporting:
       +database:  |
         {% if target.name == 'dev' %} DBT_PRAC_DEV
-        {% if target.name == 'test' %} DBT_PRAC_TEST
-        {% if target.name == 'stage' %} DBT_PRAC_STAGE
-        {% if target.name == 'prod' %} DBT_PRAC_PROD
+        {% elif target.name == 'test' %} DBT_PRAC_TEST
+        {% elif target.name == 'stage' %} DBT_PRAC_STAGE
+        {% elif target.name == 'prod' %} DBT_PRAC_PROD
         {% else %} 'invalid_database'
         {% endif %}
       +schema: loading
@@ -69,9 +69,9 @@ seeds:
   my_project:
     +database: |
      {% if target.name == 'dev' %} DBT_PRAC_DEV
-        {% if target.name == 'test' %} DBT_PRAC_TEST
-        {% if target.name == 'stage' %} DBT_PRAC_STAGE
-        {% if target.name == 'prod' %} DBT_PRAC_PROD
-        {% else %} 'invalid_database'
-        {% endif %}
+     {% elif target.name == 'test' %} DBT_PRAC_TEST
+     {% elif target.name == 'stage' %} DBT_PRAC_STAGE
+     {% elif target.name == 'prod' %} DBT_PRAC_PROD
+     {% else %} 'invalid_database'
+     {% endif %}
     +schema: raw
