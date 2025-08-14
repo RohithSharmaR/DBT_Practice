@@ -37,7 +37,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  my_project:
+  my_project:R
     staging:
       +database: |
         {% if target.name == 'dev' %} DBT_PRAC_DEV
