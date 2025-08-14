@@ -42,7 +42,7 @@ models:
       +database: DBT_PRAC_DEV
       +schema: raw
     Transformation: #path
-      +database: DBT_PRAC_DEV #configuration
+      +database: DBT_PRAC_DEV 
       +schema: Transformation
     Reporting:
       +database: DBT_PRAC_DEV
