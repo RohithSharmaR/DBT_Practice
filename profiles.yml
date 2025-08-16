@@ -1,0 +1,13 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake           # Change as needed for your warehouse
+      account: <TMPXZAS-LO42225>
+      user: <RROHSHA3>
+      password: <764484Sharma@3401>
+      role: <accountadmin>
+      database: DBT_PRAC_DEV    # Should match your dev environment
+      warehouse: <compute_wh>
+      schema: raw
+      threads: 6
